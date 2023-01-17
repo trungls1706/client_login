@@ -2,10 +2,15 @@
   "name": "client_login",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "rollup": "rm -rf dist && rollup -c"
   },
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trungls1706/client_login.git"
@@ -18,8 +23,14 @@
   },
   "homepage": "https://github.com/trungls1706/client_login#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.3.0",
+    "@rollup/plugin-typescript": "^11.0.0",
     "@types/react": "^18.0.26",
     "react": "^18.2.0",
+    "rollup": "^3.10.0",
+    "rollup-plugin-dts": "^5.1.1",
     "typescript": "^4.9.4"
   }
 }
